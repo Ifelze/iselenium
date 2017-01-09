@@ -15,18 +15,19 @@ public class Verifylogin
 	public void verifyvalidlogin()
 	
 	{
-    	File file = new File("D:/work/jh/ilms/driver/chromedriver.exe");
+    	File file = new File("C:/work/jh/ilms/driver/chromedriver.exe");
 		System.setProperty("webdriver.chrome.driver", file.getAbsolutePath());
 		WebDriver driver=new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://localhost:8080/login.html");
+		driver.get("http://localhost:8281/login.html");
 		
 		
     	Loginpage login=new Loginpage(driver);
 		login.typeusername();
 		login.typepassword();
 		login.clickonsubmitbutton();
-		login.clickonforgotpasswordlink();
+		login.clickOnLogoutButton();
+		//login.clickonforgotpasswordlink();
 	
 		
 	}

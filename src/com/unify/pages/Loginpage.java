@@ -10,11 +10,11 @@ public class Loginpage {
 	
 	WebDriver driver;
 	
-	By username=By.name("username");
-	By Password=By.name("password");
-	By Submit=By.cssSelector("#sky-form1 > input.btn-u.btn-u-sea-shop.btn-block.margin-bottom-20"); 
-	By forgotpassword=By.cssSelector("body > div.wrapper > div.log-reg-v3.content-md");
-    By logout=By.cssSelector("body > div.wrapper > div.header-v5.header-static > div.topbar-v3 > div.container > div > div:nth-child(2) > ul > li:nth-child(4) > form > input.btn-u"); 
+	By username=By.name("j_username");
+	By Password=By.name("j_password");
+	By Submit=By.xpath("/html/body/div[1]/div[3]/div/div[2]/form/div/div[4]/div/button"); 
+	//By forgotpassword=By.cssSelector("body > div.wrapper > div.log-reg-v3.content-md");
+    By logout=By.xpath("//*[@id=\"cd-logout\"]/input[1]"); 
 
  public  Loginpage (WebDriver driver)
  
@@ -24,22 +24,27 @@ public class Loginpage {
  }
  public void  typeusername()
  {
-	 driver.findElement(username).sendKeys("padmaja");
+	 driver.findElement(username).sendKeys("admin");
  }
  public void typepassword()
  {
-	 driver.findElement(Password).sendKeys("airtel");
+	 driver.findElement(Password).sendKeys("admin");
  }
  public void clickonsubmitbutton()
  {
 	 driver.findElement(Submit).click();
 	 
  }
- public void clickonforgotpasswordlink()
+ public void clickOnLogoutButton()
+ {
+	 driver.findElement(logout).click();
+	 
+ }
+/* public void clickonforgotpasswordlink()
  {
 	 driver.findElement(forgotpassword).click();
 	 
- }
+ }*/
 }
 
 

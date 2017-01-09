@@ -14,11 +14,11 @@ public class NewloginPage
 		this.driver=driver;
 	}
 	
-	@FindBy(name="uid")
+	@FindBy(name="j_username")
 	WebElement username;
-	@FindBy(how=How.CSS,using="pass")
+	@FindBy(name="j_password")
 	WebElement password;
-	@FindBy(how=How.CSS,using="submit")
+	@FindBy(xpath="/html/body/div[1]/div[3]/div/div[2]/form/div/div[4]/div/button")
 	WebElement submit_button;
 	@FindBy(how=How.LINK_TEXT,using="Forgot your Password?")
 	WebElement forgot_password;

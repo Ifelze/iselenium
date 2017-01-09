@@ -3,11 +3,26 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.unify.testcases.VerifyNewLoginPage">
+      <class name="com.unify.testcases.Registration">
         <methods>
-          <include name="checkvaliduser"/>
+          <include name="validRegistration"/>
         </methods>
-      </class> <!-- com.unify.testcases.VerifyNewLoginPage -->
+      </class> <!-- com.unify.testcases.Registration -->
+      <class name="com.unify.testcases.VerifyEResendActivationLink">
+        <methods>
+          <include name="verifyvalidResendActivation"/>
+        </methods>
+      </class> <!-- com.unify.testcases.VerifyEResendActivationLink -->
+      <class name="com.unify.testcases.VerifyRegistrerPage">
+        <methods>
+          <include name="VerifyValidRegistrerPage"/>
+        </methods>
+      </class> <!-- com.unify.testcases.VerifyRegistrerPage -->
+      <class name="com.unify.testcases.ForgotPasswordverify">
+        <methods>
+          <include name="verifyvalidlogin"/>
+        </methods>
+      </class> <!-- com.unify.testcases.ForgotPasswordverify -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
